@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://drive.google.com/uc?export=view&id=1XujFfvzvb5-zKL2u3A0bilJ9t5YIT4hG');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-color: #cdcf34ea;
+}
+/* bottom-left */
+.bottom-left {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+/* Top menu */
+.top-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Menu popup (participants) */
+.menu-popup {
+    position: absolute;
+    right: 20px;
+    background-color: #FFE168;
+    border-radius: 15px;
+    padding: 15px;
+    width: 250px;
+    bottom: 100px;
+}
+.popup-header {
+    font-weight: bold;
+    padding: 5px 12px;
+    margin-bottom: 10px;
+}
+.participant-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.participant-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.participant-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.participant-avatar {
+    font-size: 20px;
+}
+.participant-name {
+    font-size: 14px;
+}
+
+
+/* Timer section */
+.timer-section {
+    position: absolute;
+    right: 20px;
+    bottom: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+}
+.timer-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.tab {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+.tab.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+.timer-display {
+    text-align: center;
+}
+.time {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 20px;
+}
+.start-button {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Bottom toolbar */
+.bottom-menu {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    
+    /*
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 25px;*/
+}
+
+.tool-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.tool-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+a {
+    text-decoration: none; /* Loại bỏ gạch chân */
+    color: inherit; /* Giữ nguyên màu của chữ */
+  }

@@ -1,0 +1,373 @@
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  height: 100%; /* Chiều cao cố định */
+  overflow: hidden; /* Loại bỏ scroll từ body */
+}
+
+:root {
+  --left-sidebar-width: 80px; /* Width mặc định của left-sidebar */
+  --right-sidebar-width: 60px; /* Width mặc định của right-sidebar */
+  --navbar-offset-left: var(--left-sidebar-width);
+  --navbar-offset-right: var(--right-sidebar-width);
+  --navbar-width: calc(100% - var(--navbar-offset-left) - var(--navbar-offset-right));
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  border: none; /* Xóa border */
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow bao quanh */
+}
+
+
+/* Sidebar */
+.sidebar {
+  width: 80px; /* Collapsed width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0; /* Reduced padding to decrease spacing */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar:hover {
+  width: 260px;
+}
+
+/* Left Sidebar */
+.sidebar.left-sidebar {
+  width: var(--left-sidebar-width);
+  position: relative;
+  z-index: 2; /* Nằm trên top-navbar */
+  transition: width 0.3s ease;
+  background-color: #ffd966;
+}
+
+.sidebar.left-sidebar:hover {
+  --left-sidebar-width: 200px; /* Mở rộng khi hover */
+}
+
+.sidebar.right-sidebar {
+  /* margin-top: 40px; */
+  width: var(--right-sidebar-width);
+  position: relative;
+  z-index: 1; /* Nằm dưới top-navbar */
+  transition: width 0.3s ease;
+  background-color: #c8bc95;
+}
+
+.sidebar.right-sidebar:hover {
+  --right-sidebar-width: 150px; /* Mở rộng khi hover */
+}
+
+.right-sidebar ul li:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Light gray hover effect */
+}
+
+.sidebar .logo {
+  margin-bottom: 20px; /* Reduced spacing below the logo */
+  text-align: center;
+}
+
+.sidebar .logo img {
+  width: 65px; /* Adjusted logo size */
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar List */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: 0; /* Removed unnecessary top margin */
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  margin: 23px 0; /* Adjusted spacing between items */
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF; /* Pure white text */
+  text-decoration: none;
+  width: 100%;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
+  color: #FFFCE5;
+}
+
+.sidebar .icon {
+  width: 40px; /* Uniform icon container size */
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.sidebar .icon img {
+  width: 28px; /* Ensured consistent icon size */
+  height: 28px;
+}
+
+.sidebar .icon img.solo {
+  width: 25px; /* Adjust width */
+  height: 30px; /* Adjust height */
+  border-radius: 5px; /* Optional styling */
+  filter: grayscale(50%); /* Optional effect */
+}
+
+.sidebar .icon img.random {
+  width: 35px; /* Adjust width */
+  height: 30px; /* Adjust height */
+  border-radius: 0; /* Optional styling */
+  filter: brightness(1.2); /* Optional effect */
+}
+
+.sidebar .title {
+  font-size: 16px;
+  margin-left: 15px; /* Space between icon and text */
+  opacity: 0; /* Hidden initially */
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+  color: black;
+}
+
+.sidebar:hover .title {
+  opacity: 1; /* Reveal text on hover */
+}
+
+
+.join-room-btn {
+  padding: 6px 12px;
+  background: #FFFFFF;
+  color: purple;
+  border: 2px solid purple;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* position: absolute;
+  top: 30px;
+  right: 250px; */
+}
+
+.join-room-btn:hover {
+  background: purple;
+  color: white;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  background: #fff5cc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.dashboard-content h2 {
+  margin-top: 150px;
+  font-size: 24px;
+  color: #333;
+}
+
+.discord-link {
+  margin-top: 10px;
+  font-size: 16px;
+  color: purple;
+  text-decoration: none;
+  border: 1px solid purple;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.discord-link:hover {
+  background: purple;
+  color: white;
+}
+
+/* Sidebar Right */
+/* Right Sidebar */
+.right-sidebar {
+  background-color: #ffffff; /* Nền trắng */
+  box-shadow: none; /* Xóa shadow mặc định */
+}
+
+.right-sidebar h3 {
+  margin-top: 10px;
+  font-size: 14px; /* Chữ nhỏ hơn */
+  text-align: left;
+  margin-left: 10px;
+}
+
+.right-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.right-sidebar ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.right-sidebar ul li img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
+/* Top Navigation Bar */
+.top-navbar {
+  position: absolute;
+  top: 0;
+  right: 150px;
+  height: 60px;
+  /*left: var(--navbar-offset-left);  Offset từ left-sidebar */
+  /* width: 92%; */
+  transition: left 0.3s ease, width 0.3s ease; /* Chuyển động mượt */
+  /*background-color: #f8f7f3;*/
+  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* padding: 0 20px; */
+  /* z-index: 1; Nằm dưới left-sidebar */
+}
+
+.user-avatar {
+  margin-left: 10px;
+  margin-right: 18px;
+  background-size: contain;
+  height: 50px;
+   /* Thêm khoảng cách giữa avatar và Join Room button */
+  /* position: absolute;
+  top: 30px;
+  right: 200px; */
+}
+
+.top-navbar .nav-left h1 {
+  display: none; /* Ẩn chữ Dashboard */
+}
+
+.top-navbar .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.top-navbar .nav-icon img {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+/* Right Sidebar User List */
+/* Right Sidebar User List */
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatar-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-button img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.avatar-button .user-name {
+  display: none; /* Hidden by default */
+  margin-top: 5px;
+  font-size: 12px;
+  color: black;
+  text-align: center;
+}
+
+.right-sidebar:hover .avatar-button .user-name {
+  display: block; /* Display on hover */
+}
+
+/* Popup Info */
+/* Popup Info */
+.user-info-popup {
+  position: absolute;
+  right: 10px;
+  bottom: -10px;
+  height: auto;
+  width: 100px;
+  padding: 10px;
+  background: rgb(207, 218, 137);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none; /* Mặc định ẩn */
+  z-index: 10; /* Đảm bảo trên mọi thành phần khác */
+}
+
+.user-info-popup.active {
+  display: block; /* Hiển thị khi có class 'active' */
+}
+
+.user-info-popup img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.add-friend-btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+}
+
+.add-friend-btn:hover {
+  background-color: darkpurple;
+}
+
+

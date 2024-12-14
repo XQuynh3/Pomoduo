@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Random</title>
+    <link rel="stylesheet" href="./style_soloscreen.css">
+</head>
+<body>
+    <div class="background">
+        <div class="bottom-left" id="room-time">
+            <span id="current-time"></span> | hihihaha<br>
+        </div>
+        <!-- Top right menu icons -->
+        <div class="top-menu">
+            <div class="icon">🔔</div>
+            <div class="icon">🎵</div>
+        </div>
+
+        
+            <!-- Timer section -->
+        <div class="timer-section">
+            <div class="timer-tabs">
+                <button class="tab active" data-time="30">Pomodoro</button>
+                <button class="tab" data-time="5">Short Break</button>
+                <button class="tab" data-time="15">Long Break</button>
+            </div>
+            <div class="timer-display">
+                <div class="time">30:00</div>
+                <button class="start-button">Start</button>
+            </div>
+        </div>
+
+        <!-- Bottom toolbar -->
+        <div class="bottom-menu">
+            <div class="tool-icon">⏰</div>
+            <a href="dashboard.html"><div class="tool-icon">➡︎</div></a>
+            
+        </div>
+    </div>
+   
+    <script src="./solo_screen.js"></script>
+</body>
+</html>

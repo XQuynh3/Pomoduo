@@ -1,0 +1,168 @@
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container and Layout */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 80px; /* Collapsed width */
+  background: linear-gradient(to bottom, #FFC107, #e8e3a0); /* Subtle gradient for elegance */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0; /* Reduced padding to decrease spacing */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar:hover {
+  width: 200px; /* Expanded width */
+}
+
+.sidebar .logo {
+  margin-bottom: 20px; /* Reduced spacing below the logo */
+  text-align: center;
+}
+
+.sidebar .logo img {
+  width: 65px; /* Adjusted logo size */
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar List */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: 0; /* Removed unnecessary top margin */
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  margin: 23px 0; /* Adjusted spacing between items */
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF; /* Pure white text */
+  text-decoration: none;
+  width: 100%;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
+  color: #FFFCE5;
+}
+
+.sidebar .icon {
+  width: 40px; /* Uniform icon container size */
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.sidebar .icon img {
+  width: 28px; /* Ensured consistent icon size */
+  height: 28px;
+}
+
+.sidebar .icon img.solo {
+  width: 25px; /* Adjust width */
+  height: 30px; /* Adjust height */
+  border-radius: 5px; /* Optional styling */
+  filter: grayscale(50%); /* Optional effect */
+}
+
+
+.sidebar .icon img.random {
+  width: 35px; /* Adjust width */
+  height: 30px; /* Adjust height */
+  border-radius: 0; /* Optional styling */
+  filter: brightness(1.2); /* Optional effect */
+}
+
+
+.sidebar .title {
+  font-size: 16px;
+  margin-left: 15px; /* Space between icon and text */
+  opacity: 0; /* Hidden initially */
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+  color: black;
+}
+
+.sidebar:hover .title {
+  opacity: 1; /* Reveal text on hover */
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: linear-gradient(to bottom, #FFC107, #e8e3a0); /* Gradient for main content */
+}
+
+.preview img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.info h1 {
+  font-family: "Times New Roman", serif;
+  font-size: 36px;
+  color: #333; /* Dark text */
+  margin: 10px 0;
+}
+
+/* Subtitle */
+.info p {
+  font-family: "Times New Roman", serif;
+  font-size: 18px;
+  color: #555;
+  margin: 10px 0 30px;
+}
+
+/* Start Button */
+.start-btn {
+  padding: 15px 30px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: purple;
+  background-color: white;
+  border: 2px solid purple;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: purple;
+  color: white;
+}
+

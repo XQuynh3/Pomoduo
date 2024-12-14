@@ -1,0 +1,100 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+/* Back arrow */
+.back-arrow {
+    margin-bottom: 20px;
+}
+
+.back-arrow a {
+    text-decoration: none;
+    color: #f0b429;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center !important;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.hint {
+    height: 10px;
+    font-size: 10px;
+    color: #888;
+    margin-bottom: 5px;
+    margin-top: -5px;
+    padding-top: -5px !important;
+    font-style: italic;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    width: 90%;
+}
+
+input:focus {
+    border-color: #f0b429;
+}
+
+/* Reset button */
+.reset-btn {
+    padding: 12px 20px;
+    background-color: #ffd966;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.reset-btn:hover {
+    background-color: #d99d23;
+}
+a {
+    text-decoration: none; /* Loại bỏ gạch chân */
+    color: inherit; /* Giữ nguyên màu của chữ */
+  }
